@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:undefeats/business/get_winner_details/parse_winner_details.dart';
 import 'package:undefeats/data/constants/constants.dart';
+import 'package:undefeats/ui/show_text_widget/show_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class VerticalScreen extends StatelessWidget {
@@ -66,57 +67,13 @@ class VerticalScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                        padding: EdgeInsets.only(
-                            bottom: constrains.maxHeight * 0.02,
-                            top: constrains.maxHeight * 0.03),
-                        width: constrains.maxWidth * 0.85,
-                        child: Text(
-                          _getDetails.shortName.isNotEmpty
-                              ? 'Short Name: ${_getDetails.shortName}'
-                              : 'Loading',
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )),
-                    Container(
-                        padding: EdgeInsets.only(
-                            bottom: constrains.maxHeight * 0.02),
-                        width: constrains.maxWidth * 0.85,
-                        child: Text(
-                          _getDetails.clubColors.isNotEmpty
-                              ? 'Club Colors: ${_getDetails.clubColors}'
-                              : 'Loading',
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )),
-                    Container(
-                        padding: EdgeInsets.only(
-                            bottom: constrains.maxHeight * 0.02),
-                        width: constrains.maxWidth * 0.85,
-                        child: Text(
-                          _getDetails.venue.isNotEmpty
-                              ? 'Venue: ${_getDetails.venue}'
-                              : 'Loading',
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )),
-                    Container(
-                        padding: EdgeInsets.only(
-                            bottom: constrains.maxHeight * 0.02),
-                        width: constrains.maxWidth * 0.85,
-                        child: Text(
-                          _getDetails.phone.isNotEmpty
-                              ? 'Phone: ${_getDetails.phone}'
-                              : 'Loading',
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )),
-                    Container(
-                        padding: EdgeInsets.only(
-                            bottom: constrains.maxHeight * 0.02),
-                        width: constrains.maxWidth * 0.85,
-                        child: Text(
-                          _getDetails.address.isNotEmpty
-                              ? 'Address: ${_getDetails.address}'
-                              : 'Loading',
-                          style: Theme.of(context).textTheme.bodyText1,
-                        )),
+                    ShowText(
+                        'Short Name: ${_getDetails.shortName}', constrains),
+                    ShowText(
+                        'Club Colors: ${_getDetails.clubColors}', constrains),
+                    ShowText('Venue: ${_getDetails.venue}', constrains),
+                    ShowText('Phone: ${_getDetails.phone}', constrains),
+                    ShowText('Address: ${_getDetails.address}', constrains),
                     GestureDetector(
                       onTap: () async {
                         // ignore: only_throw_errors
@@ -125,19 +82,8 @@ class VerticalScreen extends StatelessWidget {
                             // ignore: only_throw_errors
                             : throw 'Could not launch Url';
                       },
-                      child: Container(
-                          padding: EdgeInsets.only(
-                              bottom: constrains.maxHeight * 0.02),
-                          width: constrains.maxWidth * 0.85,
-                          child: Text(
-                            _getDetails.website.isNotEmpty
-                                ? 'Website: ${_getDetails.website}'
-                                : 'Loading',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText1
-                                ?.copyWith(color: Colors.blue),
-                          )),
+                      child: ShowText(
+                          'Website: ${_getDetails.website}', constrains),
                     ),
                   ],
                 ),
