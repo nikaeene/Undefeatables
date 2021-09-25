@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:undefeats/ui/screens/main_page.dart';
+import 'package:undefeats/ui/screens/main_page/main_page.dart';
 
 void main() {
   runApp(const MyApp());

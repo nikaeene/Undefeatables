@@ -6,7 +6,7 @@ import 'package:undefeats/business/matches_list_bloc/matches_list_cubit.dart';
 import 'package:undefeats/business/teams_list_bloc/teams_list_cubit.dart';
 import 'package:undefeats/data/parse/parse_matches_list.dart';
 import 'package:undefeats/data/parse/parse_teams_list.dart';
-import 'package:undefeats/ui/screens/vertical_screen.dart';
+import 'package:undefeats/ui/screens/main_page/vertical_screen.dart';
 
 import 'horizantal_screen.dart';
 
