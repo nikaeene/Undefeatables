@@ -23,7 +23,7 @@ class GetMatchesList {
       return MatchesList.fromJson(json);
 
     } on Error {
-      Error error = ArgumentError('oh!');
+      Error error = ArgumentError('Check the output in MatchesList');
       throw error;
     }
   }

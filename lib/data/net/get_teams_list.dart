@@ -19,7 +19,7 @@ class GetTeamsList {
       final json = jsonDecode(response.body);
       return TeamsList.fromJson(json);
     } on Error {
-      Error error = ArgumentError('oh!');
+      Error error = ArgumentError('Check the output in TeamsList');
       throw error;
     }
   }
