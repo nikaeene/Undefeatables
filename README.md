@@ -15,6 +15,11 @@ And I am fan of CHELSEA and now We are UNDEFEATABLES!
 4. set data, and assign winner
 5. view the winner details in screen
 
+I respect and implement:
+1. SOLID coding
+2. BLoC architecture
+3. Unity Tests
+
 
 ![Alt text](http://mysip.ir/temp/Screenshot1.jpg "Lanscape")
 ![Alt text](http://mysip.ir/temp/Screenshot2.jpg "Portrait")
