@@ -19,7 +19,11 @@ I respect and implement:
 1. SOLID coding
 2. BLoC architecture
 3. Unity Tests
+4. Responsive Design
 
 
-![Alt text](http://mysip.ir/temp/Screenshot1.jpg "Lanscape")
-![Alt text](http://mysip.ir/temp/Screenshot2.jpg "Portrait")
+<img class="my-image" id="pic128540" width="650" height="300" 
+    src="http://mysip.ir/temp/Screenshot1.jpg">
+<img class="my-image" id="pic128540" width="300" height="650" 
+    src="http://mysip.ir/temp/Screenshot2.jpg">
+
