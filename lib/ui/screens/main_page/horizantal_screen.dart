@@ -4,7 +4,9 @@ import 'package:undefeats/business/get_winner_details/parse_winner_details.dart'
 import 'package:undefeats/data/constants/constants.dart';
 import 'package:undefeats/ui/widgets/show_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+/*
+To show Horizental view
+ */
 class HorizantalScreen extends StatelessWidget {
   final BoxConstraints constrains;
   final Map details;

@@ -7,9 +7,11 @@ import 'package:undefeats/business/teams_list_bloc/teams_list_cubit.dart';
 import 'package:undefeats/data/parse/parse_matches_list.dart';
 import 'package:undefeats/data/parse/parse_teams_list.dart';
 import 'package:undefeats/ui/screens/main_page/vertical_screen.dart';
-
 import 'horizantal_screen.dart';
 
+/*
+The Main page call first by main , calls to cubit to fetch data from API and sort them out to show in Screen
+ */
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
