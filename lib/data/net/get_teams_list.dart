@@ -18,8 +18,9 @@ class GetTeamsList {
       });
       final json = jsonDecode(response.body);
       return TeamsList.fromJson(json);
-    } catch(error) {
-      rethrow;
+    } on Error {
+      Error error = ArgumentError('oh!');
+      throw error;
     }
   }
 }

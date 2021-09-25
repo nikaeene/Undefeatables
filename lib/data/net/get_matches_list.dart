@@ -15,12 +15,16 @@ class GetMatchesList {
     try {
       final response = await http.get(uri, headers: {
         Constants.tokenName: Constants.apiToken,
+      }).catchError((error){
+        return error;
       });
       final json = jsonDecode(response.body);
 
       return MatchesList.fromJson(json);
-    } catch (error) {
-      rethrow;
+
+    } on Error {
+      Error error = ArgumentError('oh!');
+      throw error;
     }
   }
 }
